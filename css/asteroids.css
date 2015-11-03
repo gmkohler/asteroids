@@ -1,19 +1,66 @@
+@font-face {
+    font-family: 'ArcadeClassic'; /*a name to be used later*/
+    src: url('../assets/ARCADECLASSIC.TTF'); /*URL to font*/
+}
+
+html {
+  font-family: 'ArcadeClassic';
+  letter-spacing:1px;
+  height:100%;
+  width:100%;
+}
 body {
+  margin:0;
+  height:100%;
   position:relative;
   background-image: url("../assets/asteroids-background.jpg");
   background-size: cover;
 }
 
-.game-info {
-  position:absolute;
+#start-screen {
+  height:100%;
+  width:100%;
+  background-color: rgba(0, 0, 0, 0.4);
   display:block;
+  padding: 15% 0;
+}
+
+#game-canvas {
+  display:none;
+}
+
+#start-screen div {
+  display:table;
+  margin:auto;
+  color: #FFFFFF;
+}
+
+#start-screen div.title {
+  font-size:96px;
+}
+
+#start-screen div.subtitle {
+  font-size:36px;
+}
+#start-screen div.controls {
+  font-size: 24px;
+}
+#start-screen div.controls div {
+  display:inline-block;
+  clear:both;
+  float:left;
+}
+
+#game-info {
+  position:absolute;
+  display:none;
   left:0;
   bottom:5%;
   width:20%;
   color: #FFFFFF;
 }
 
-.game-info div{
+#game-info div{
     clear:both;
     display:inline-block;
     float:left;

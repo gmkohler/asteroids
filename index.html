@@ -5,9 +5,22 @@
 
 <html>
   <body>
+    <div id="start-screen">
+      <div class="title">
+        <span>ASTEROIDS</span>
+      </div>
+      <div class="subtitle"><span>[return] to play</span></div>
+      <div class="controls">
+        <div>
+          <span>move: arrow keys</span>
+        </div>
+        <div>
+          <span>fire: [space]</span>
+        </div>
+      </div>
+    </div>
 
-
-    <div class="game-info">
+    <div id="game-info">
       <div id="lives"></div>
       <div id="score"></div>
     </div>
@@ -25,36 +38,46 @@
     <script src="./lib/bullet.js"></script>
 
     <script type="text/javascript">
-
-
       var game = new Asteroids.Game(3, 3);
 
       var canvasEl = document.getElementsByTagName("canvas")[0];
       canvasEl.width = window.innerWidth;
       canvasEl.height = window.innerHeight;
       var ctx = canvasEl.getContext("2d");
+      document.addEventListener('keyup', onEnter);
 
-      var gv = new window.Asteroids.gameView(game, ctx);
-      var scoreboard = document.getElementById("scoreboard");
-
-      document.addEventListener('keyup', function (e) {
-
-        switch (e.keyCode) {
-          case 37:
-            gv.game.ship.stopRotate();
-            break;
-          case 39:
-            gv.game.ship.stopRotate();
-            break;
-          case 38:
-            gv.game.ship.stopPower();
-            break;
-          case 40:
-            gv.game.ship.stopPower();
-            break;
+      function onEnter (e) {
+        if (e.keyCode === 13) {
+          $("#start-screen").css('display', 'none');
+          $("#game-canvas").css('display', 'block');
+          $("#game-info").css('display', 'block');
+          startGame();
         }
-      })
-      gv.start();
+      }
+
+      function startGame () {
+        document.removeEventListener('keyup', onEnter)
+        var gv = new window.Asteroids.gameView(game, ctx);
+        var scoreboard = document.getElementById("scoreboard");
+
+        document.addEventListener('keyup', function (e) {
+          switch (e.keyCode) {
+            case 37:
+              gv.game.ship.stopRotate();
+              break;
+            case 39:
+              gv.game.ship.stopRotate();
+              break;
+            case 38:
+              gv.game.ship.stopPower();
+              break;
+            case 40:
+              gv.game.ship.stopPower();
+              break;
+          }
+        })
+        gv.start();
+      }
 
     </script>
 
