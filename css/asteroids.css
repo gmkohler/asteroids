@@ -11,11 +11,12 @@ body {
   bottom:5%;
   width:20%;
   color: #FFFFFF;
+}
 
-  div{
+.game-info div{
+    clear:both;
     display:inline-block;
     float:left;
-  }
 }
 
 .clearfix {
