@@ -5,29 +5,30 @@
 
 <html>
   <body>
-    <div id="start-screen">
-      <div class="title">
-        <span>ASTEROIDS</span>
-      </div>
-      <div class="subtitle"><span>[return] to play</span></div>
-      <div class="controls">
-        <div>
-          <span>move: arrow keys</span>
+    <div class="screen-container">
+      <div id="start-screen">
+        <div class="start-text-container">
+          <div class="title">
+            <span>ASTEROIDS</span>
+          </div>
+          <div class="subtitle"><span>[return] to play</span></div>
+          <div class="controls">
+            <div><span>move: arrow keys</span></div>
+            <div><span>fire: [space]</span></div>
+          </div>
         </div>
-        <div>
-          <span>fire: [space]</span>
-        </div>
       </div>
+
+      <div id="game-info">
+        <div id="lives"></div>
+        <div id="score"></div>
+      </div>
+      <canvas id="game-canvas"></canvas>
     </div>
 
-    <div id="game-info">
-      <div id="lives"></div>
-      <div id="score"></div>
-    </div>
     <script type="text/javascript"
             src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.3/jquery.js">
     </script>
-    <canvas id="game-canvas"></canvas>
     <script src="./keymaster/keymaster.js"></script>
     <script src="./lib/gameView.js"></script>
     <script src="./lib/game.js"></script>

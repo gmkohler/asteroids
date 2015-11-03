@@ -16,23 +16,28 @@ body {
   background-image: url("../assets/asteroids-background.jpg");
   background-size: cover;
 }
+.screen-container{
+  height:100%;
+}
 
 #start-screen {
   height:100%;
   width:100%;
   background-color: rgba(0, 0, 0, 0.4);
   display:block;
-  padding: 15% 0;
 }
+
 
 #game-canvas {
   display:none;
 }
-
 #start-screen div {
   display:table;
-  margin:auto;
+  margin: auto;
   color: #FFFFFF;
+}
+#start-screen>div{
+  padding: 15% 0;
 }
 
 #start-screen div.title {
