@@ -31,6 +31,38 @@ body {
 #game-canvas {
   display:none;
 }
+
+#level-modal {
+  position:absolute;
+  height:100%;
+  width:100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display:none;
+  color: #FFFFFF;
+  font-size:96px;3
+}
+#level-display {
+  position:absolute;
+  top:25%;
+  left:37%;
+}
+
+#game-over-screen {
+  height:100%;
+  width:100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display:none;
+}
+#game-over-screen div {
+  display:table;
+  margin: auto;
+  color: #FFFFFF;
+}
+#game-over-screen>div{
+  padding: 15% 0;
+}
+
+
 #start-screen div {
   display:table;
   margin: auto;
@@ -39,7 +71,12 @@ body {
 #start-screen>div{
   padding: 15% 0;
 }
-
+div.lives {
+  font-size:24px;
+}
+div.score {
+  font-size:24px;
+}
 #start-screen div.title {
   font-size:96px;
 }
