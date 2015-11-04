@@ -22,6 +22,7 @@
       <div id="game-info">
         <div id="lives"></div>
         <div id="score"></div>
+        <div id="hi-score"></div>
       </div>
       <div id="level-modal">
         <div id="level-display">
@@ -48,7 +49,7 @@
     <script type="text/javascript">
       var game = new Asteroids.Game(3);
       var canvasEl = document.getElementsByTagName("canvas")[0];
-      
+
       canvasEl.width = window.innerWidth;
       canvasEl.height = window.innerHeight;
       var ctx = canvasEl.getContext("2d");
