@@ -4,7 +4,8 @@
 }
 
 html {
-  font-family: 'ArcadeClassic';
+  font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+  font-weight:900;
   letter-spacing:1px;
   height:100%;
   width:100%;
@@ -18,6 +19,14 @@ body {
 }
 .screen-container{
   height:100%;
+}
+
+#logo {
+  height:120px;
+  width:400px;
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-image: url("../assets/Asteroids-logo-screen.png")
 }
 
 #start-screen {
@@ -42,9 +51,8 @@ body {
   font-size:96px;3
 }
 #level-display {
-  position:absolute;
-  top:25%;
-  left:37%;
+  display: table;
+  margin: 15% auto;
 }
 
 #game-over-screen {
@@ -55,11 +63,10 @@ body {
 }
 #game-over-screen div {
   display:table;
-  margin: auto;
+  margin: 15% auto;
   color: #FFFFFF;
 }
 #game-over-screen>div{
-  padding: 15% 0;
 }
 
 
@@ -96,7 +103,7 @@ div.score {
 #game-info {
   position:absolute;
   display:none;
-  left:0;
+  margin-left:10px;
   bottom:5%;
   width:20%;
   color: #FFFFFF;
